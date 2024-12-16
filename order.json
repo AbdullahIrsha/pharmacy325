@@ -1,0 +1,269 @@
+{
+  "categories": [
+    {
+      "name": "Analgesics",
+      "medicines": [
+        {
+          "name": "Paracetamol",
+          "price": 800,
+          "Image": "./Images/paracetamol.jpg",
+          "alt": "Paracetamol tablets for pain relief"
+        },
+        {
+          "name": "Aspirin",
+          "price": 900,
+          "Image": "./Images/Aspirin.jpg",
+          "alt": "Aspirin tablets for pain and inflammation"
+        },
+        {
+          "name": "Ibuprofen",
+          "price": 1200,
+          "Image": "./Images/Ibuprofen.jpg",
+          "alt": "Ibuprofen tablets for reducing pain and fever"
+        },
+        {
+          "name": "Naproxen",
+          "price": 1500,
+          "Image": "./Images/Naproxen.jpg",
+          "alt": "Naproxen capsules for pain and arthritis relief"
+        },
+        {
+          "name": "Diclofenac",
+          "price": 1800,
+          "Image": "./Images/Diclofenac.jpg",
+          "alt": "Diclofenac gel for joint and muscle pain"
+        },
+        {
+          "name": "Celecoxib",
+          "price": 2200,
+          "Image": "./Images/Celecoxib.jpg",
+          "alt": "Celecoxib capsules for arthritis pain relief"
+        },
+        {
+          "name": "Acetaminophen",
+          "price": 700,
+          "Image": "./Images/Acetaminophen.jpg",
+          "alt": "Acetaminophen tablets for mild pain and fever"
+        },
+        {
+          "name": "Ketorolac",
+          "price": 2500,
+          "Image": "./Images/Ketorolac.jpg",
+          "alt": "Ketorolac injections for severe pain"
+        }
+      ]
+    },
+    {
+      "name": "Antibiotics",
+      "medicines": [
+        {
+          "name": "Amoxicillin",
+          "price": 1200,
+          "Image": "./Images/Amoxicillin.jpg",
+          "alt": "Amoxicillin capsules for bacterial infections"
+        },
+        {
+          "name": "Ciprofloxacin",
+          "price": 1400,
+          "Image": "./Images/Ciprofloxacin.jpg",
+          "alt": "Ciprofloxacin tablets for urinary tract infections"
+        },
+        {
+          "name": "Doxycycline",
+          "price": 1800,
+          "Image": "./Images/Doxycycline.jpg",
+          "alt": "Doxycycline capsules for acne and bacterial infections"
+        },
+        {
+          "name": "Azithromycin",
+          "price": 2000,
+          "Image": "./Images/Azithromycin.jpg",
+          "alt": "Azithromycin tablets for respiratory infections"
+        },
+        {
+          "name": "Clindamycin",
+          "price": 2500,
+          "Image": "./Images/Clindamycin.jpg",
+          "alt": "Clindamycin gel for skin infections"
+        },
+        {
+          "name": "Metronidazole",
+          "price": 1600,
+          "Image": "./Images/Metronidazole.jpg",
+          "alt": "Metronidazole tablets for bacterial and parasitic infections"
+        },
+        {
+          "name": "Vancomycin",
+          "price": 4500,
+          "Image": "./Images/Vancomycin.jpg",
+          "alt": "Vancomycin injections for severe bacterial infections"
+        },
+        {
+          "name": "Gentamicin",
+          "price": 3000,
+          "Image": "./Images/Gentamicin.jpg",
+          "alt": "Gentamicin injections for bacterial infections"
+        }
+      ]
+    },
+    {
+      "name": "Antipyretics",
+      "medicines": [
+        {
+          "name": "Fenoprofen",
+          "price": 900,
+          "Image": "./Images/Fenoprofen.jpg",
+          "alt": "Fenoprofen tablets for pain and fever"
+        },
+        {
+          "name": "Meclofenamate",
+          "price": 1100,
+          "Image": "./Images/Meclofenamate.jpg",
+          "alt": "Meclofenamate capsules for arthritis and menstrual pain"
+        },
+        {
+          "name": "Oxaprozin",
+          "price": 1400,
+          "Image": "./Images/Oxaprozin.jpg",
+          "alt": "Oxaprozin tablets for long-term arthritis management"
+        },
+        {
+          "name": "Sulfipyrazone",
+          "price": 1700,
+          "Image": "./Images/Sulfinpyrazone.jpg",
+          "alt": "Sulfipyrazone tablets for gout treatment"
+        },
+        {
+          "name": "Tizanidine",
+          "price": 1500,
+          "Image": "./Images/Tizanidine.jpg",
+          "alt": "Tizanidine tablets for muscle spasm relief"
+        },
+        {
+          "name": "Nabumetone",
+          "price": 2100,
+          "Image": "./Images/Nabumetone.jpg",
+          "alt": "Nabumetone tablets for arthritis pain"
+        },
+        {
+          "name": "Diflunisal",
+          "price": 2300,
+          "Image": "./Images/Diflunisal.jpg",
+          "alt": "Diflunisal tablets for pain and inflammation"
+        },
+        {
+          "name": "Propyphenazone",
+          "price": 700,
+          "Image": "./Images/Propyphenazone.jpg",
+          "alt": "Propyphenazone tablets for fever reduction"
+        }
+      ]
+    },
+    {
+      "name": "Antihistamines",
+      "medicines": [
+        {
+          "name": "Cetirizine",
+          "price": 800,
+          "Image": "./Images/Cetirizine.jpg",
+          "alt": "Cetirizine tablets for allergy relief"
+        },
+        {
+          "name": "Loratadine",
+          "price": 1000,
+          "Image": "./Images/Loratadine.jpg",
+          "alt": "Loratadine tablets for seasonal allergies"
+        },
+        {
+          "name": "Fexofenadine",
+          "price": 1200,
+          "Image": "./Images/Fexofenadine.jpg",
+          "alt": "Fexofenadine tablets for hay fever and hives"
+        },
+        {
+          "name": "Diphenhydramine",
+          "price": 900,
+          "Image": "./Images/Diphenhydramine.jpg",
+          "alt": "Diphenhydramine capsules for allergy symptoms"
+        },
+        {
+          "name": "Chlorpheniramine",
+          "price": 700,
+          "Image": "./Images/Chlorpheniramine.jpg",
+          "alt": "Chlorpheniramine tablets for sneezing and runny nose"
+        },
+        {
+          "name": "Desloratadine",
+          "price": 1400,
+          "Image": "./Images/Desloratadine.jpg",
+          "alt": "Desloratadine tablets for chronic hives"
+        },
+        {
+          "name": "Levocetirizine",
+          "price": 1600,
+          "Image": "./Images/Levocetirizine.jpg",
+          "alt": "Levocetirizine tablets for persistent allergies"
+        },
+        {
+          "name": "Brompheniramine",
+          "price": 900,
+          "Image": "./Images/Brompheniramine.jpg",
+          "alt": "Brompheniramine tablets for cold and allergy symptoms"
+        }
+      ]
+    },
+    {
+      "name": "Antiseptics",
+      "medicines": [
+        {
+          "name": "Chlorhexidine",
+          "price": 2000,
+          "Image": "./Images/Chlorhexidine.jpg",
+          "alt": "Chlorhexidine solution for wound cleaning"
+        },
+        {
+          "name": "Iodine",
+          "price": 1800,
+          "Image": "./Images/Iodine.jpg",
+          "alt": "Iodine tincture for antiseptic use"
+        },
+        {
+          "name": "Hydrogen Peroxide",
+          "price": 1500,
+          "Image": "./Images/Hydrogen Peroxide.jpg",
+          "alt": "Hydrogen peroxide for disinfection"
+        },
+        {
+          "name": "Benzalkonium Chloride",
+          "price": 1700,
+          "Image": "./Images/Benzalkonium Chloride.jpg",
+          "alt": "Benzalkonium chloride wipes for skin disinfection"
+        },
+        {
+          "name": "Alcohol Prep Pads",
+          "price": 600,
+          "Image": "./Images/Alcohol Prep Pads.jpg.jpg",
+          "alt": "Alcohol prep pads for quick disinfection"
+        },
+        {
+          "name": "Silver Sulfadiazine",
+          "price": 2500,
+          "Image": "./Images/Silver Sulfadiazine.jpg",
+          "alt": "Silver sulfadiazine cream for burn treatment"
+        },
+        {
+          "name": "Neomycin",
+          "price": 3000,
+          "Image": "./Images/Neomycin.jpg",
+          "alt": "Neomycin ointment for minor skin infections"
+        },
+        {
+          "name": "Mupirocin",
+          "price": 4000,
+          "Image": "./Images/Mupirocin.jpg",
+          "alt": "Mupirocin ointment for bacterial skin infections"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    /* Basic font, spacing, and color settings for the whole page */
+    font-family: Arial, sans-serif; /* Sets a clean, readable font */
+    line-height: 1.6; /* Improves readability with better line spacing */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    background-color: #f9f9f9; /* Sets a light background for contrast */
+    color: #333; /* Dark gray text color for better readability */
+}
+
+header {
+    /* Styling for the header section */
+    text-align: center; /* Centers all content inside the header */
+    padding: 20px; /* Adds spacing inside the header */
+    background-color: #3642c7; /* Sets a blue background */
+    color: white; /* White text for contrast against the blue background */
+}
+
+h1 {
+    /* Styling for the main title */
+    margin: 0; /* Removes default margin around the title */
+    font-size: 2.5em; /* Sets a large font size for prominence */
+}
+
+input#search {
+    /* Styling for the search bar */
+    width: 80%; /* Makes the input field take up 80% of the parent width */
+    max-width: 500px; /* Sets a maximum width to avoid oversized inputs */
+    padding: 10px; /* Adds internal spacing for better usability */
+    margin-top: 10px; /* Adds spacing above the input */
+    font-size: 1em; /* Sets font size to match the rest of the design */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Adds rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+}
+
+/* Categories Section */
+#medicine-categories {
+    /* Layout for the medicine categories section */
+    display: flex; /* Uses flexbox for easy alignment */
+    flex-wrap: wrap; /* Allows items to wrap onto the next row if necessary */
+    gap: 20px; /* Adds spacing between items */
+    padding: 20px; /* Adds internal spacing */
+    max-width: 1200px; /* Limits the width for better readability */
+    margin: 0 auto; /* Centers the section horizontally */
+    justify-content: space-between; /* Evenly distributes items across the row */
+}
+
+.category {
+    /* Styling for individual category cards */
+    background-color: #fff; /* White background for contrast */
+    padding: 15px; /* Adds spacing inside the card */
+    border-radius: 10px; /* Rounds the corners of the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Makes the card take up the full width of its container */
+}
+
+.category h2 {
+    /* Styling for category headings */
+    text-align: center; /* Centers the text inside the card */
+    font-size: 1.5em; /* Sets a larger font size for the heading */
+    color: #3642c7; /* Matches the brand color */
+    margin-bottom: 10px; /* Adds spacing below the heading */
+}
+
+.medicines {
+    /* Grid layout for medicine items */
+    display: grid; /* Uses grid layout for alignment */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatically adjusts columns based on available space */
+    gap: 20px; /* Adds spacing between items */
+}
+
+.item {
+    /* Styling for individual medicine items */
+    text-align: center; /* Centers the content inside the item */
+    background-color: #fdfdfd; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border for separation */
+    padding: 10px; /* Adds spacing inside the item */
+    border-radius: 8px; /* Rounds the corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    transition: transform 0.2s; /* Smooth scaling animation on hover */
+}
+
+.item:hover {
+    /* Hover effect for medicine items */
+    transform: scale(1.05); /* Slightly enlarges the item */
+}
+
+.item img {
+    /* Styling for medicine images */
+    width: 100%; /* Makes the image take up the full width of its container */
+    max-width: 150px; /* Sets a maximum width */
+    height: 150px; /* Ensures consistent height for all images */
+    object-fit: cover; /* Ensures the image fills the container proportionally */
+    margin-bottom: 10px; /* Adds spacing below the image */
+    border-radius: 8px; /* Rounds the corners of the image */
+}
+
+.item p {
+    /* Styling for text inside medicine items */
+    font-size: 1em; /* Standard font size for readability */
+    color: #333; /* Dark gray text for contrast */
+    margin: 10px 0; /* Adds spacing above and below the text */
+}
+
+.item input.quantity {
+    /* Input field for specifying quantity */
+    width: 60px; /* Sets a small width for the input */
+    padding: 5px; /* Adds internal spacing */
+    font-size: 1em; /* Matches the font size of the rest of the item */
+    margin-bottom: 10px; /* Adds spacing below the input */
+    border: 1px solid #ccc; /* Subtle border for separation */
+    border-radius: 5px; /* Rounds the corners */
+    text-align: center; /* Centers the text inside the input field */
+}
+
+.item button {
+    /* Buttons for adding items to the cart */
+    padding: 10px; /* Adds spacing inside the button */
+    background-color: #3642c7; /* Brand color for the button */
+    color: white; /* White text for contrast */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Smooth color change on hover */
+}
+
+.item button:hover {
+    /* Hover effect for buttons */
+    background-color: #7d92fa; /* Lighter blue for hover state */
+}
+
+/* Cart Section */
+#cart-section {
+    /* Styling for the shopping cart section */
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Adds internal spacing */
+    margin: 20px auto; /* Centers the section and adds spacing above/below */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    max-width: 1200px; /* Limits the width for better readability */
+}
+
+#cart-table {
+    /* Styling for the cart table */
+    width: 100%; /* Makes the table take up the full width of its container */
+    border-collapse: collapse; /* Removes space between table cells */
+    overflow-x: auto; /* Enables horizontal scrolling if necessary */
+}
+
+#cart-table th, #cart-table td {
+    /* Styling for table cells */
+    border: 1px solid #ddd; /* Subtle borders between cells */
+    padding: 10px; /* Adds internal spacing */
+    text-align: left; /* Aligns content to the left */
+}
+
+#cart-table th {
+    /* Styling for table headers */
+    background-color: #3642c7; /* Brand color for the header */
+    color: white; /* White text for contrast */
+}
+
+#cart-total {
+    /* Styling for the total price section */
+    text-align: right; /* Aligns the text to the right */
+    margin-top: 10px; /* Adds spacing above the total price */
+    font-size: 1.2em; /* Slightly larger font size for emphasis */
+}
+
+/* Add further comments for other sections as needed */
+.cart-buttons {
+    /* Layout for cart action buttons (e.g., clear cart, checkout) */
+    display: flex; /* Uses flexbox for alignment */
+    flex-wrap: wrap; /* Allows buttons to wrap if space is limited */
+    justify-content: space-between; /* Evenly distributes buttons */
+    margin-top: 20px; /* Adds spacing above the buttons */
+}
+
+.cart-buttons button {
+    /* Styling for action buttons */
+    flex: 1; /* Ensures buttons are evenly spaced */
+    margin: 10px; /* Adds spacing between buttons */
+    padding: 10px; /* Adds internal spacing for usability */
+    background-color: #3642c7; /* Brand color for the buttons */
+    color: white; /* White text for contrast */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Smooth color change on hover */
+}
+
+.cart-buttons button:hover {
+    /* Hover effect for action buttons */
+    background-color: #7d92fa; /* Light blue hover state */
+}
+
+/* Buy Now Button */
+#buy-now {
+    /* Styling for the 'Buy Now' button */
+    display: block; /* Ensures the button is centered */
+    margin: 20px auto; /* Centers the button and adds spacing */
+    padding: 15px 30px; /* Adds larger spacing for prominence */
+    background-color: #0d0d0d; /* Black background for contrast */
+    color: white; /* White text for visibility */
+    font-size: 1.2em; /* Larger font size for emphasis */
+    border: none; /* Removes the default border */
+    border-radius: 8px; /* Rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the button text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+#buy-now:hover {
+    /* Hover effect for the 'Buy Now' button */
+    background-color: #3f3f3f; /* Dark gray hover state */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Footer */
+footer {
+    /* Styling for the footer section */
+    text-align: center; /* Centers the footer content */
+    padding: 20px; /* Adds internal spacing */
+    background-color: #3642c7; /* Matches the brand color */
+    color: white; /* White text for visibility */
+    margin-top: 20px; /* Adds spacing above the footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjustments for tablets and smaller devices */
+    h1 {
+        font-size: 2em; /* Reduces the main title size for smaller screens */
+    }
+
+    input#search {
+        width: 90%; /* Makes the search bar take up more screen space */
+        font-size: 0.9em; /* Reduces font size slightly */
+    }
+
+    .item img {
+        max-width: 120px; /* Reduces image size for smaller screens */
+        height: 120px; /* Ensures consistent height */
+    }
+
+    .cart-buttons button {
+        flex: 1 100%; /* Makes each button take up the full width */
+        margin: 10px 0; /* Adds spacing above and below buttons */
+    }
+
+    #buy-now {
+        font-size: 1em; /* Reduces button font size */
+        padding: 10px 20px; /* Adjusts button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjustments for smartphones and very small screens */
+    input#search {
+        width: 100%; /* Makes the search bar fully responsive */
+        font-size: 0.8em; /* Reduces font size for smaller screens */
+    }
+
+    .category h2 {
+        font-size: 1.2em; /* Reduces heading size for smaller screens */
+    }
+
+    .item p {
+        font-size: 0.9em; /* Reduces text size inside items */
+    }
+
+    .item button {
+        font-size: 0.9em; /* Adjusts button font size */
+        padding: 8px; /* Reduces padding for smaller screens */
+    }
+}
+
+/* For users who need assistive technologies */
+.sr-only {
+    /* Styles for screen-reader-only content */
+    position: absolute; /* Removes the element from normal layout flow */
+    width: 1px; /* Shrinks the width to a tiny value */
+    height: 1px; /* Shrinks the height to a tiny value */
+    padding: 0; /* Removes padding */
+    margin: -1px; /* Removes margin */
+    overflow: hidden; /* Hides the content visually */
+    clip: rect(0, 0, 0, 0); /* Clips the element completely */
+    white-space: nowrap; /* Prevents text wrapping */
+    border: 0; /* Removes borders */
+}

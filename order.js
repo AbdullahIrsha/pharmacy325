@@ -16,14 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('apply-favorites').addEventListener('click', loadFavorites);
     document.getElementById('go-back').addEventListener('click', goBackToOrderPage);
 
-    // Handle the payment and show the thank you message
-    const orderDetailsForm = document.getElementById('orderDetailsForm');
-    orderDetailsForm.addEventListener('submit', handlePayment);
-
-    // Handle going back to the order page from thank you message
+    // Handle going back from the thank you page
     document.getElementById('go-back-from-thank-you').addEventListener('click', goBack);
 
-    // Simulate a delivery date and display on the order confirmation page
+    // Set delivery date for order confirmation
     const deliveryDate = new Date();
     deliveryDate.setDate(deliveryDate.getDate() + 3); // Delivery in 3 days
     document.getElementById('delivery-date').textContent = `Your order will be delivered on: ${deliveryDate.toLocaleDateString()}`;
@@ -31,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to handle payment and show the thank you message and summary table
 function handlePayment(event) {
-    // Prevent the form from submitting to keep the page from reloading
     event.preventDefault();
 
     // Hide the order details form
@@ -44,36 +39,32 @@ function handlePayment(event) {
 
     // Show the summary table
     const summaryTableSection = document.getElementById('summary-table-section');
-    summaryTableSection.style.display = 'block'; // Show the summary table section
+    summaryTableSection.style.display = 'block';
 
-    // Simulate a delivery date (for demonstration purposes)
+    // Set delivery date
     const deliveryDate = new Date();
-    deliveryDate.setDate(deliveryDate.getDate() + 3); // Delivery in 3 days
+    deliveryDate.setDate(deliveryDate.getDate() + 3);
     document.getElementById('deliveryDate').textContent = `Your order will be delivered on: ${deliveryDate.toLocaleDateString()}`;
 }
 
-// Function to handle going back to the order page (resetting the form)
+// Function to go back to the order page
 function goBack() {
-    // Show the order details form again
     const orderDetailsForm = document.getElementById('orderDetailsForm');
     orderDetailsForm.style.display = 'block';
 
-    // Hide the thank you message
     const thankYouMessage = document.getElementById('thankYouMessage');
     thankYouMessage.style.display = 'none';
 
-    // Hide the summary table
     const summaryTableSection = document.getElementById('summary-table-section');
     summaryTableSection.style.display = 'none';
 
-    // Optionally, reset the form fields (if needed)
     orderDetailsForm.reset();
 }
 
 // Render categories dynamically
 function renderCategories(categories) {
     const categoriesContainer = document.getElementById('medicine-categories');
-    categoriesContainer.innerHTML = ''; // Clear the container first
+    categoriesContainer.innerHTML = '';
 
     categories.forEach(category => {
         const section = document.createElement('section');
@@ -149,11 +140,7 @@ function filterMedicines() {
 
     items.forEach(item => {
         const name = item.getAttribute('data-name').toLowerCase();
-        if (name.includes(searchQuery)) {
-            item.style.display = 'inline-block';
-        } else {
-            item.style.display = 'none';
-        }
+        item.style.display = name.includes(searchQuery) ? 'inline-block' : 'none';
     });
 }
 
@@ -164,9 +151,8 @@ function clearCart() {
     document.getElementById('total-price').textContent = '0';
 }
 
-// Navigate to checkout page when Buy Now is clicked
+// Navigate to checkout page
 function navigateToCheckout() {
-    // Store cart data in localStorage for the checkout page
     const cartRows = document.querySelectorAll('#cart-table tbody tr');
     const cartData = Array.from(cartRows).map(row => {
         const cells = row.children;
@@ -178,14 +164,17 @@ function navigateToCheckout() {
     });
 
     localStorage.setItem('cart', JSON.stringify(cartData));
-
-    // Redirect to the checkout page
     window.location.href = 'checkout.html';
 }
 
 // Save the favorites to localStorage
 function saveFavorites() {
     const cartRows = document.querySelectorAll('#cart-table tbody tr');
+    if (cartRows.length === 0) {
+        alert('Your cart is empty. Add items to save as favorites.');
+        return;
+    }
+
     const favorites = Array.from(cartRows).map(row => {
         const cells = row.children;
         return {
@@ -196,18 +185,22 @@ function saveFavorites() {
     });
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    alert('Favorites have been saved!');
+    alert('Favorites have been saved successfully!');
 }
 
 // Load favorites from localStorage and apply to the cart
 function loadFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites'));
-    if (!favorites) {
+    if (!favorites || favorites.length === 0) {
         alert('No favorites found!');
         return;
     }
 
     const cartTable = document.querySelector('#cart-table tbody');
+    cartTable.innerHTML = ''; // Clear the cart table before applying favorites
+
+    let totalPrice = 0;
+
     favorites.forEach(favorite => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -217,10 +210,14 @@ function loadFavorites() {
             <td>$${(favorite.quantity * favorite.price).toFixed(2)}</td>
         `;
         cartTable.appendChild(row);
+        totalPrice += favorite.quantity * favorite.price;
     });
 
-    updateCart();
+    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+
+    alert('Favorites have been applied to the cart!');
 }
+
 
 // Go back to the order page
 function goBackToOrderPage() {
@@ -230,7 +227,5 @@ function goBackToOrderPage() {
     const checkoutSection = document.getElementById('thank-you-section');
     checkoutSection.style.display = 'none';
 
-    // Clear cart
     clearCart();
 }
-
